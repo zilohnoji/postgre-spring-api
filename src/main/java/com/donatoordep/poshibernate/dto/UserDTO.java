@@ -18,6 +18,10 @@ public class UserDTO implements Serializable, ConversibleContract<User> {
 	}
 
 	public UserDTO(User entity) {
+		this.id = entity.getId();
+		this.name = entity.getName();
+		this.login = entity.getLogin();
+		this.password = entity.getPassword();
 	}
 
 	public UserDTO(Long id, String name, String login, String password) {

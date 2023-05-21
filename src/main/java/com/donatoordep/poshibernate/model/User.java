@@ -29,9 +29,16 @@ public class User implements Serializable, ConversibleContract<UserDTO> {
 	}
 
 	public User(UserDTO dto) {
+		this.id = dto.getId();
 		this.name = dto.getName();
 		this.login = dto.getLogin();
 		this.password = dto.getPassword();
+	}
+
+	public User(String name, String login, String password) {
+		this.name = name;
+		this.login = login;
+		this.password = password;
 	}
 
 	public Long getId() {
